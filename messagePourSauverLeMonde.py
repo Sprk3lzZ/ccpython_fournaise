@@ -78,7 +78,7 @@ majeurs = 0
 mineurs = 0
 
 for loop in range(len(ages)):
-    if ages[loop] > 5:
+    if ages[loop] >= 5:
         majeurs += 1
     else:
         mineurs += 1
