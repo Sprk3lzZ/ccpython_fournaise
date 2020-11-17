@@ -64,6 +64,23 @@ for loop in range(len(citoyen)-10):
         del citoyen[loop]
 
 print(citoyen)
+print("\n")
 
 
 
+################################################################################################
+
+file_age = open('ageDodo.txt','r')
+dodo = file_age.readline()
+ages = dodo.split(", ")
+ages = [int(x) for x in ages]
+majeurs = 0
+mineurs = 0
+
+for loop in range(len(ages)):
+    if ages[loop] > 5:
+        majeurs += 1
+    else:
+        mineurs += 1
+
+print(majeurs," majeurs et ", mineurs, "mineurs.")
