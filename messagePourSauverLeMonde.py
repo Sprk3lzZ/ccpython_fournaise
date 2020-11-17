@@ -44,13 +44,26 @@ for line3 in file_abri:
         else:
             max = "gauche"
         print("Vous avez fait un nombre de ",pas, " dont la pluspart vers la/l' : ", max)
+        print("\n")
+file_abri.close()
+
 
 
 ################################################################################################
 
 
+file_abri = open('LafamilleDodo.txt','r')
+dodo = file_abri.readline()
+citoyen = dodo.split(", ")
 
+citoyen = [int(x) for x in citoyen]
+citoyen.sort()
 
+for loop in range(len(citoyen)-10):
+    if citoyen[loop+1] == citoyen[loop]:
+        del citoyen[loop]
+
+print(citoyen)
 
 
 
